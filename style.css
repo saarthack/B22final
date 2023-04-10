@@ -1,0 +1,128 @@
+@font-face {
+    font-family: america;
+    src: url(./GT-America-Compressed-Bold.ttf);
+}
+@font-face {
+    font-family:america-b;
+    src: url(./GT-America-Compressed-Black-Trial.otf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:gilroy;
+}
+
+*::selection{
+    color: #fff;
+    background-color: #111;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+#nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 99;
+}
+#nav h3{
+    font-family: america;
+    text-transform: uppercase;
+    color: #c45508;
+    font-size: 30px;
+}
+
+#page1{
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/b66561b8981387290c0f682665512759c66aa7bb-2880x1796.png/image.png?bg=F2F1EC&w=1440&h=898&auto=format);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#page1 svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.4);
+    z-index: 99;
+}
+
+#page1 h1{
+    font-size: 14vw;
+    text-align: center;
+    width: 100%;
+    padding: 0 10px;
+    position: absolute;
+    bottom: -5%;
+    color: #c45508;
+    text-transform: uppercase;
+    font-family: america-b;
+    font-weight: 900;
+}
+#page1 h1::before{
+    content: "bownds ranches. est. 1885";
+    position: absolute;
+    font-size: 1.1vw;
+    font-family: gilroy;
+    font-weight: 500;
+    left: 2.7vw;
+}
+#page1 h1::after{
+    content: "marketing and selling texas ranches";
+    position: absolute;
+    font-size: 1vw;
+    font-family: montserrat;
+    font-weight: 500;
+    right: 2.7vw;
+}
+
+
+#overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+#scroll{
+    background-image: url(https://bowndsranches.com/textures/buttonDarkBg.svg);
+    padding: 8px 20px;
+    font-family: america;
+    word-spacing: 5px;
+    color: #fff;
+    position: absolute;
+    text-transform: uppercase;
+    scale: 0;
+    transition: all ease-out 0.3s;
+}
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#page2 h1{
+    font-size: 13vw;
+    line-height: 9.7vw;
+    word-spacing: -16px;
+    letter-spacing: -4px;
+    text-align: center;
+    padding: 100px 100px;
+    color: #111;
+    background-color: #fff;
+    font-family: america-b;
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+}
