@@ -106,9 +106,12 @@ body {
 }
 
 #page2{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     position: relative;
+    /* background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/217c65c6aa3412acac7b3d2fa8adc9020e487780-2724x1936.jpg/map.jpg?rect=1,0,2723,1936&w=1024&h=728&auto=format); */
+    background-position: 60% 0%;
+
 }
 #page2 h1{
     font-size: 13vw;
@@ -118,10 +121,73 @@ body {
     text-align: center;
     padding: 100px 100px;
     color: #111;
+    position: relative;
     background-color: #fff;
+    background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/217c65c6aa3412acac7b3d2fa8adc9020e487780-2724x1936.jpg/map.jpg?rect=1,0,2723,1936&w=1024&h=728&auto=format);
+    background-position: 0% 1200%;
+    background-repeat: no-repeat;
     font-family: america-b;
 }
+#page2 h1::before{
+    content: "THE REPRESENTATION YOU DESERVE";
+    position: absolute;
+    bottom: 10%;
+    font-size: 1.1vw;
+    width: 13%;
+    text-align: left;
+    line-height: 1.3vw;
+    font-family: gilroy;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    font-weight: 500;
 
+}
+
+#page2 h1::after{
+    content: "ONE OF AMERICA’S BEST BROKERAGES";
+    position: absolute;
+    bottom: 10%;
+    font-size: 1.1vw;
+    width: 13%;
+    right: 10%;
+    text-align: right;
+    line-height: 1.3vw;
+    font-family: gilroy;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    font-weight: 500;
+
+}
+#page2 img{
+    height: 800px;
+    position: relative;
+    left: 28vw;
+    rotate: 5deg;
+}
+#page2 h2{
+    font-size: 13vw;
+    line-height: 9.7vw;
+    word-spacing: -16px;
+    letter-spacing: -4px;
+    text-align: center;
+    padding: 100px 100px;
+    color: #111;
+    position: relative;
+    font-family: america-b;
+}
+#page2 h2::after{
+    content: "THIRD GENERATION FAMILY-OWNED RANCH BROKERAGE";
+    font-size: 1.2vw;
+    line-height: 1.3vw;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    word-spacing: 0px;
+    letter-spacing:0px;
+    font-family: gilroy;
+    font-weight: 600;
+    transform: translate(-50%,0);
+}
 #page3{
     height: 100vh;
     width: 100%;
