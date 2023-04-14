@@ -32,12 +32,32 @@ body {
     padding: 10px 20px;
     position: fixed;
     z-index: 99;
+    color: #c45508;
 }
 #nav h3{
     font-family: america;
     text-transform: uppercase;
-    color: #c45508;
-    font-size: 30px;
+    color: inherit;
+    font-size: 28px;
+    width: 20%;
+    /* background-color: red; */
+    text-align: center;
+}
+#nav h3:nth-child(1){
+    text-align: left;
+
+}
+#nav h3:nth-child(2){
+    text-align: left;
+
+}
+#nav h3:nth-child(3){
+    text-align: right;
+
+}
+#nav h3:nth-child(4){
+    text-align: right;
+
 }
 
 #page1{
@@ -49,13 +69,18 @@ body {
     background-position: center;
     overflow: hidden;
 }
-#page1 svg{
+svg{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) scale(1.4);
     z-index: 99;
+    fill: #c45508;
 }
+path{
+    fill: inherit;
+}
+
 
 #page1 h1{
     font-size: 14vw;
@@ -191,4 +216,49 @@ body {
 #page3{
     height: 100vh;
     width: 100%;
+    position: relative;
+    background-color: #111;
+    padding: 100px 120px;
+}
+
+#page3 h1{
+    color: #fff;
+    font-size: 9vw;
+    letter-spacing: -5px;
+    word-spacing: 0px;
+    line-height: 8vw;
+
+    font-family: america;
+    text-align: center;
+    text-transform: uppercase;
+}
+#page3 h2{
+    color: #fff;
+    font-size: 7.5vw;
+    letter-spacing: -5px;
+    word-spacing: 5px;
+    font-weight: 100;
+    font-family: america;
+    text-align: center;
+    -webkit-text-stroke: 3px #111;
+    text-transform: uppercase;
+}
+#page3 p{
+    color: #fff;
+    font-size: 1vw; 
+    width: 50%;
+    font-weight: 600;
+    font-family: gilroy;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vw;
+    text-transform: uppercase;
+
+}
+
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000;
 }

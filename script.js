@@ -67,3 +67,57 @@ gsap.to("#page2 img",{
         scrub:3
     }
 })
+
+
+gsap.to("svg",{
+    scale:1,
+    top:"5%",
+    fill:"#111",
+    scrollTrigger:{
+        trigger:"svg",
+        scroller:"#main",
+        markers:"true",
+        start:"top 45%",
+        end:"top -50%",
+        scrub:true,
+    }
+})
+
+gsap.to("#nav",{
+    color:"#111",
+    background: "linear-gradient(#ffffffeb,#ffffff6e,#ffffff00)",
+    scrollTrigger:{
+        trigger:"#nav h3",
+        scroller:"#main",
+        markers:"true",
+        start:"top -100%",
+        end:"top -100%",
+        scrub:true,
+    }
+})
+
+gsap.to("svg",{
+    scale:1,
+    top:"5%",
+    fill:"#fff",
+    scrollTrigger:{
+        trigger:"svg",
+        scroller:"#main",
+        markers:"true",
+        start:"top -350%",
+        end:"top -350%",
+        scrub:true,
+    }
+})
+gsap.to("#nav",{
+    color:"#fff",
+    background: "linear-gradient(#000000d5,#00000089,#00000000)",
+    scrollTrigger:{
+        trigger:"#nav h3",
+        scroller:"#main",
+        markers:"true",
+        start:"top -400%",
+        end:"top -400%",
+        scrub:true,
+    }
+})
