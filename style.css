@@ -24,6 +24,9 @@ body {
     height: 100%;
     width: 100%;
 }
+#main{
+    background-color: #111;
+}
 #nav{
     width: 100%;
     display: flex;
@@ -68,6 +71,7 @@ body {
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    background-color: #fff;
 }
 svg{
     position: absolute;
@@ -93,6 +97,9 @@ path{
     text-transform: uppercase;
     font-family: america-b;
     font-weight: 900;
+}
+#page2 h1 span{
+    font-family: america-b;
 }
 #page1 h1::before{
     content: "bownds ranches. est. 1885";
@@ -136,6 +143,7 @@ path{
     position: relative;
     /* background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/217c65c6aa3412acac7b3d2fa8adc9020e487780-2724x1936.jpg/map.jpg?rect=1,0,2723,1936&w=1024&h=728&auto=format); */
     background-position: 60% 0%;
+    background-color: #fff;
 
 }
 #page2 h1{
@@ -144,6 +152,7 @@ path{
     word-spacing: -16px;
     letter-spacing: -4px;
     text-align: center;
+    overflow: hidden;
     padding: 100px 100px;
     color: #111;
     position: relative;
@@ -257,8 +266,37 @@ path{
 
 }
 
+#page3 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: top;
+}
+#img-div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/9b2b1e20d57cf6988eb3192c1a261b8475d701d4-8192x5464.jpg/JRP_BR_01_1165-Edit.jpg?rect=1038,632,3956,4832&bg=F2F1EC&fp-x=0.3681506849315068&fp-y=0.5578489448352462&w=640&h=815&fit=crop&crop=focalpoint&auto=format);
+    background-position: top;
+    background-size: cover;
+    transition: all linear 0.2s;
+}
+#img-div h5{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 10px;
+    z-index: 99;
+    background-color: #fff;
+}
 #page4{
     min-height: 100vh;
     width: 100%;
-    background-color: #000;
+    background-color: #111;
 }

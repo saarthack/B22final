@@ -42,6 +42,9 @@ function init() {
 
 init()
 
+
+
+
 var overlay = document.querySelector("#overlay")
 var iscroll = document.querySelector("#scroll")
 
@@ -83,6 +86,13 @@ gsap.to("svg",{
     }
 })
 
+gsap.from("#page2 h1",{
+    duration:0.5,
+    onStart:function(){
+        $('#page2 h1').textillate({ in: { effect: 'fadeInUp' } });
+    }
+})
+
 gsap.to("#nav",{
     color:"#111",
     background: "linear-gradient(#ffffffeb,#ffffff6e,#ffffff00)",
@@ -120,4 +130,9 @@ gsap.to("#nav",{
         end:"top -400%",
         scrub:true,
     }
+})
+
+document.querySelector("#page3").addEventListener("mousemove",function(dets){
+    document.querySelector("#page3 #img-div").style.left = `${dets.x}px`
+    document.querySelector("#page3 #img-div").style.top = `${dets.y}px`
 })
