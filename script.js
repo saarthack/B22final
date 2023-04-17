@@ -70,6 +70,17 @@ gsap.to("#page2 img",{
         scrub:3
     }
 })
+gsap.to("#main",{
+    backgroundColor:"#111",
+    scrollTrigger:{
+        scroller:"#main",
+        trigger:"#page2",
+        start:"top -100%",
+        end:"top -100%",
+        markers:true,
+        scrub:3
+    }
+})
 
 
 gsap.to("svg",{
@@ -135,4 +146,11 @@ gsap.to("#nav",{
 document.querySelector("#page3").addEventListener("mousemove",function(dets){
     document.querySelector("#page3 #img-div").style.left = `${dets.x}px`
     document.querySelector("#page3 #img-div").style.top = `${dets.y}px`
+})
+
+document.querySelector("#page4").addEventListener("mousemove",function(dets){
+    document.querySelector("#page4>img").style.left = dets.x+"px"
+    document.querySelector("#page4>img").style.top = dets.y+"px"
+    document.querySelector("#page4>button").style.left = (dets.x+40) +"px"
+    document.querySelector("#page4>button").style.top = (dets.y+200)+"px"
 })

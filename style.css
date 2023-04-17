@@ -25,7 +25,7 @@ body {
     width: 100%;
 }
 #main{
-    background-color: #111;
+    background-color: #fff;
 }
 #nav{
     width: 100%;
@@ -299,4 +299,103 @@ path{
     min-height: 100vh;
     width: 100%;
     background-color: #111;
+    padding: 100px 0;
+}
+#page4>button{
+    background-image: url(https://bowndsranches.com/textures/buttonBg.svg);
+    padding: 10px 20px;
+    position: absolute;
+    border: none;
+    font-family: america;
+    text-transform: uppercase;
+    font-size: 17px;
+    z-index: 99;
+    transition: all linear 0.4s;
+}
+#page4>img{
+    height: 400px;
+    position: absolute;
+    transition: all linear 0.4s;
+    width: 300px;
+
+
+}
+
+
+.elem{
+    border-top: 1px solid #ffffffc1;
+    position: relative;
+    cursor: default;
+    margin-top: -20px;
+}
+.elem:nth-last-child(1){
+    border-bottom: 1px solid #ffffffc1;
+}
+
+.elem h1{
+    font-size: 150px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    transition: opacity ease 0.1s;
+    opacity: 0.3;
+    font-family: america-b;
+
+}
+.elem h2{
+    font-size: 150px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    transition: opacity ease 0.1s;
+
+}
+
+#moving-text{
+    /* background-color: #111; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    transition: opacity ease 0.1s;
+    opacity: 0;
+}
+#moving-text h2{
+    display: inline-block;
+    /* background-color: green; */
+    margin-left: -4px;
+    animation-name: move-txt;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+    padding-right: 70px;
+    /* background-color: red; */
+    font-family: america-b;
+
+}
+#moving-text h2 img{
+    rotate: 45deg;
+    height: 30px;
+    right: 3%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+
+}
+.elem:hover #moving-text{
+    opacity: 1;
+}
+.elem:hover h1{
+    opacity: 0;
+}
+
+@keyframes move-txt {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
 }
