@@ -60,97 +60,123 @@ overlay.addEventListener("mousemove", function (dets) {
 })
 
 
-gsap.to("#page2 img",{
-    rotate:-5,
-    scrollTrigger:{
-        scroller:"#main",
-        trigger:"#page2 img",
-        start:"top 80%",
-        markers:true,
-        scrub:3
-    }
-})
-gsap.to("#main",{
-    backgroundColor:"#111",
-    scrollTrigger:{
-        scroller:"#main",
-        trigger:"#page2",
-        start:"top -100%",
-        end:"top -100%",
-        markers:true,
-        scrub:3
+gsap.to("#page2 img", {
+    rotate: -5,
+    scrollTrigger: {
+        scroller: "#main",
+        trigger: "#page2 img",
+        start: "top 80%",
+        // markers: true,
+        scrub: 3
     }
 })
 
 
-gsap.to("svg",{
-    scale:1,
-    top:"5%",
-    fill:"#111",
-    scrollTrigger:{
-        trigger:"svg",
-        scroller:"#main",
-        markers:"true",
-        start:"top 45%",
-        end:"top -50%",
-        scrub:true,
+gsap.to("#main", {
+    backgroundColor: "#111",
+    scrollTrigger: {
+        scroller: "#main",
+        trigger: "#page2",
+        start: "top -100%",
+        end: "top -100%",
+        // markers: true,
+        scrub: 3
     }
 })
 
-gsap.from("#page2 h1",{
-    duration:0.5,
-    onStart:function(){
-        $('#page2 h1').textillate({ in: { effect: 'fadeInUp' } });
+
+gsap.to("svg", {
+    scale: 1,
+    top: "5%",
+    fill: "#111",
+    scrollTrigger: {
+        trigger: "svg",
+        scroller: "#main",
+        // markers: "true",
+        start: "top 45%",
+        end: "top -50%",
+        scrub: true,
     }
 })
 
-gsap.to("#nav",{
-    color:"#111",
+gsap.from("#page2 h1", {
+    duration: 0.5,
+    onStart: function () {
+        $('#page2 h1').textillate({
+            in: {
+                effect: 'fadeInUp'
+            }
+        });
+    }
+})
+
+gsap.to("#nav", {
+    color: "#111",
     background: "linear-gradient(#ffffffeb,#ffffff6e,#ffffff00)",
-    scrollTrigger:{
-        trigger:"#nav h3",
-        scroller:"#main",
-        markers:"true",
-        start:"top -100%",
-        end:"top -100%",
-        scrub:true,
+    scrollTrigger: {
+        trigger: "#nav h3",
+        scroller: "#main",
+        // markers: "true",
+        start: "top -100%",
+        end: "top -100%",
+        scrub: true,
     }
 })
 
-gsap.to("svg",{
-    scale:1,
-    top:"5%",
-    fill:"#fff",
-    scrollTrigger:{
-        trigger:"svg",
-        scroller:"#main",
-        markers:"true",
-        start:"top -350%",
-        end:"top -350%",
-        scrub:true,
+gsap.to("svg", {
+    scale: 1,
+    top: "5%",
+    fill: "#fff",
+    scrollTrigger: {
+        trigger: "svg",
+        scroller: "#main",
+        // markers: "true",
+        start: "top -350%",
+        end: "top -350%",
+        scrub: true,
     }
 })
-gsap.to("#nav",{
-    color:"#fff",
+gsap.to("#nav", {
+    color: "#fff",
     background: "linear-gradient(#000000d5,#00000089,#00000000)",
-    scrollTrigger:{
-        trigger:"#nav h3",
-        scroller:"#main",
-        markers:"true",
-        start:"top -400%",
-        end:"top -400%",
-        scrub:true,
+    scrollTrigger: {
+        trigger: "#nav h3",
+        scroller: "#main",
+        // markers: "true",
+        start: "top -400%",
+        end: "top -400%",
+        scrub: true,
     }
 })
 
-document.querySelector("#page3").addEventListener("mousemove",function(dets){
+document.querySelector("#page3").addEventListener("mousemove", function (dets) {
     document.querySelector("#page3 #img-div").style.left = `${dets.x}px`
     document.querySelector("#page3 #img-div").style.top = `${dets.y}px`
 })
 
-document.querySelector("#page4").addEventListener("mousemove",function(dets){
-    document.querySelector("#page4>img").style.left = dets.x+"px"
-    document.querySelector("#page4>img").style.top = dets.y+"px"
-    document.querySelector("#page4>button").style.left = (dets.x+40) +"px"
-    document.querySelector("#page4>button").style.top = (dets.y+200)+"px"
+document.querySelector("#page4").addEventListener("mousemove", function (dets) {
+    document.querySelector("#page4>img").style.left = dets.x + "px"
+    document.querySelector("#page4>img").style.top = dets.y + "px"
+    document.querySelector("#page4>button").style.left = (dets.x + 50) + "px"
+    document.querySelector("#page4>button").style.top = (dets.y + 200) + "px"
+})
+
+var elem = document.querySelectorAll(".elem")
+elem.forEach(function(e){
+    var a = e.getAttribute("data-img")
+    e.addEventListener("mouseenter",function(){
+        document.querySelector("#page4>img").setAttribute("src",a)
+    })
+})
+
+
+gsap.to("#page5-div1",{
+    scrollTrigger:{
+        trigger:"#page5-div1",
+        scroller:"#main",
+        start:"top 30%",
+        end:"top 5%",
+        markers:true,
+        pin:true
+    }
 })
