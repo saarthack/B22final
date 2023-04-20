@@ -431,10 +431,87 @@ path{
     background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/ac5d899c94acdca5124d1fcfb738940892e29544-1520x973.png/image.png?rect=0,1,1520,972&bg=F2F1EC&w=1024&h=655&auto=format);
 }
 #page6{
-    min-height: 100vh;
+    min-height: 200vh;
     width: 100%;
     padding: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+}
+#page6 img{
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    
+}
+#page6-text{
+    position: relative;
+    z-index: 99;
+    padding: 5px 20px;
+}
+#page6-text h1{
+    font-size: 7.5vw;
+    line-height: 7vw;
+    color: #fff;
+    font-family: america;
+}
+
+#text-right{
+    position: absolute;
+    top: 150%;
+    right: 10%;
+    width: 20%;
+}
+#text-right p{
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+}
+#page6-text button{
+    padding: 12px 30px;
+    font-size: 15px;
+    margin-top: 30px;
+    font-family: america;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.2s;
+
+}
+#page6-text button:hover{
+    color: #111;
+}
+#page6-text button::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    left: 0;
+    top: 100%;
+    transition: all ease 0.2s;
+    z-index: -1;
+}
+
+
+#page6-text button:hover::after{
+    top: 0;
+}
+
+#text-center{
+    position: absolute;
+    top: 350%;
+    left:50%;
+    transform: translate(-50%,0);
+    text-align: center;
+
+    width: 60%;
+}
+
+#page6-text h2{
+    font-size: 4vw;
+    line-height: 3.5vw;
+    text-align: center;
+    font-family: america;
+    color: #fff;
 }

@@ -59,6 +59,38 @@ overlay.addEventListener("mousemove", function (dets) {
     iscroll.style.top = `${dets.y - 38}px`
 })
 
+document.querySelector("#page3").addEventListener("mousemove", function (dets) {
+    document.querySelector("#page3 #img-div").style.left = `${dets.x}px`
+    document.querySelector("#page3 #img-div").style.top = `${dets.y}px`
+})
+
+document.querySelector("#page4").addEventListener("mousemove", function (dets) {
+    document.querySelector("#page4>img").style.left = dets.x + "px"
+    document.querySelector("#page4>img").style.top = dets.y + "px"
+    document.querySelector("#page4>button").style.left = (dets.x + 50) + "px"
+    document.querySelector("#page4>button").style.top = (dets.y + 200) + "px"
+})
+
+var elem = document.querySelectorAll(".elem")
+elem.forEach(function(e){
+    var a = e.getAttribute("data-img")
+    e.addEventListener("mouseenter",function(){
+        document.querySelector("#page4>img").setAttribute("src",a)
+    })
+})
+
+
+gsap.from("#page2 h1", {
+    duration: 0.5,
+    onStart: function () {
+        $('#page2 h1').textillate({
+            in: {
+                effect: 'fadeInUp'
+            }
+        });
+    }
+})
+
 
 gsap.to("#page2 img", {
     rotate: -5,
@@ -85,10 +117,8 @@ gsap.to("#main", {
 })
 
 
-gsap.to("svg", {
-    scale: 1,
-    top: "5%",
-    fill: "#111",
+// Make a timeline to pin svg and change color of nav to black
+var tl = gsap.timeline({
     scrollTrigger: {
         trigger: "svg",
         scroller: "#main",
@@ -99,84 +129,63 @@ gsap.to("svg", {
     }
 })
 
-gsap.from("#page2 h1", {
-    duration: 0.5,
-    onStart: function () {
-        $('#page2 h1').textillate({
-            in: {
-                effect: 'fadeInUp'
-            }
-        });
-    }
-})
-
-gsap.to("#nav", {
-    color: "#111",
-    background: "linear-gradient(#ffffffeb,#ffffff6e,#ffffff00)",
-    scrollTrigger: {
-        trigger: "#nav h3",
-        scroller: "#main",
-        // markers: "true",
-        start: "top -100%",
-        end: "top -100%",
-        scrub: true,
-    }
-})
-
-gsap.to("svg", {
+tl.to("svg", {
     scale: 1,
     top: "5%",
-    fill: "#fff",
+    fill: "#111",
+
+})
+
+
+tl.to("#nav", {
+    color: "#111",
+    background: "linear-gradient(#ffffffeb,#ffffff6e,#ffffff00)",
+})
+
+// Make a timeline again to change color of nav and svg to white
+
+var tl2 = gsap.timeline({
     scrollTrigger: {
         trigger: "svg",
         scroller: "#main",
         // markers: "true",
-        start: "top -350%",
-        end: "top -350%",
+        start: "top -340%",
+        end: "top -340%",
         scrub: true,
     }
 })
-gsap.to("#nav", {
+tl2.to("svg", {
+    scale: 1,
+    top: "5%",
+    fill: "#fff",
+
+})
+tl2.to("#nav", {
     color: "#fff",
     background: "linear-gradient(#000000d5,#00000089,#00000000)",
-    scrollTrigger: {
-        trigger: "#nav h3",
-        scroller: "#main",
-        // markers: "true",
-        start: "top -400%",
-        end: "top -400%",
-        scrub: true,
-    }
-})
-
-document.querySelector("#page3").addEventListener("mousemove", function (dets) {
-    document.querySelector("#page3 #img-div").style.left = `${dets.x}px`
-    document.querySelector("#page3 #img-div").style.top = `${dets.y}px`
-})
-
-document.querySelector("#page4").addEventListener("mousemove", function (dets) {
-    document.querySelector("#page4>img").style.left = dets.x + "px"
-    document.querySelector("#page4>img").style.top = dets.y + "px"
-    document.querySelector("#page4>button").style.left = (dets.x + 50) + "px"
-    document.querySelector("#page4>button").style.top = (dets.y + 200) + "px"
-})
-
-var elem = document.querySelectorAll(".elem")
-elem.forEach(function(e){
-    var a = e.getAttribute("data-img")
-    e.addEventListener("mouseenter",function(){
-        document.querySelector("#page4>img").setAttribute("src",a)
-    })
 })
 
 
-gsap.to("#page5-div1",{
+
+gsap.from("#page5-div1",{
+    y:100,
     scrollTrigger:{
         trigger:"#page5-div1",
         scroller:"#main",
-        start:"top 30%",
-        end:"top 5%",
+        start:"top 73%",
+        end:"top 70%",
         markers:true,
-        pin:true
+        scrub:1
+    }
+})
+gsap.from("#page5-div2",{
+    y:400,
+    scrollTrigger:{
+        trigger:"#page5-div2",
+        scroller:"#main",
+        start:"top 85%",
+        end:"top 82%",
+        markers:true,
+        scrub:1
     }
 })
