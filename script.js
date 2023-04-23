@@ -83,7 +83,7 @@ elem.forEach(function(e){
 gsap.from("#page2 h1", {
     duration: 0.5,
     onStart: function () {
-        $('#page2 h1').textillate({ in: { effect: 'fadeInUp',   delayScale: 0.5, } });
+        $('#page2 h1').textillate({ in: { effect: 'bounceIn',   delayScale: 0.5, } });
     },
     scrollTrigger:{
         trigger:"#page2 h1",
@@ -177,9 +177,21 @@ gsap.to("#page5",{
         markers:true
     }
 })
+gsap.from("#page5-div1",{
+    rotate:-5,
+    scrollTrigger:{
+        trigger:"#page5-div1",
+        scroller:"#main",
+        start:"top 85%%",
+        end:"top 30%",
+        markers:true,
+        scrub:true,
+    }
+})
 
 gsap.from("#page5-div2",{
-    y:600,
+    y:570,
+    rotate:-15,
     scrollTrigger:{
         trigger:"#page5-div2",
         scroller:"#main",
