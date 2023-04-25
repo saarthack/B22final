@@ -1,18 +1,41 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 @font-face {
     font-family: america;
-    src: url(./GT-America-Compressed-Bold.ttf);
+    src: url(./GT-America-Compressed-Bold.woff2);
 }
 
 @font-face {
     font-family: america-b;
-    src: url(./GT-America-Compressed-Black-Trial.otf);
+    src: url(./GT-America-Compressed-Black-Trial.woff2);
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-Medium.woff2);
+    font-weight: 500;
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-Semibold.woff2);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-bold.woff2);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(./Montserrat-Bold.woff2);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(./Montserrat-Bold.woff2);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(./Montserrat-Medium.woff2);
+    font-weight: 500;
 }
 
 
