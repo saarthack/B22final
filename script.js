@@ -9,7 +9,11 @@ function init() {
     });
     // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
     locoScroll.on("scroll", ScrollTrigger.update);
-
+    locoScroll.on("resize",function(){
+        location.reload()
+        locoScroll.update()
+    })
+    
     // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
     ScrollTrigger.scrollerProxy("#main", {
         scrollTop(value) {
@@ -45,6 +49,7 @@ init()
 
 
 
+
 var overlay = document.querySelector("#overlay")
 var iscroll = document.querySelector("#scroll")
 
@@ -72,10 +77,10 @@ document.querySelector("#page4").addEventListener("mousemove", function (dets) {
 })
 
 var elem = document.querySelectorAll(".elem")
-elem.forEach(function(e){
+elem.forEach(function (e) {
     var a = e.getAttribute("data-img")
-    e.addEventListener("mouseenter",function(){
-        document.querySelector("#page4>img").setAttribute("src",a)
+    e.addEventListener("mouseenter", function () {
+        document.querySelector("#page4>img").setAttribute("src", a)
     })
 })
 
@@ -83,12 +88,17 @@ elem.forEach(function(e){
 gsap.from("#page2 h1", {
     duration: 0.5,
     onStart: function () {
-        $('#page2 h1').textillate({ in: { effect: 'bounceIn',   delayScale: 0.5, } });
+        $('#page2 h1').textillate({
+            in: {
+                effect: 'bounceIn',
+                delayScale: 0.5,
+            }
+        });
     },
-    scrollTrigger:{
-        trigger:"#page2 h1",
-        scroller:"#main",
-        start:"top 90%"
+    scrollTrigger: {
+        trigger: "#page2 h1",
+        scroller: "#main",
+        start: "top 90%"
     }
 })
 
@@ -118,86 +128,180 @@ gsap.to("#main", {
 })
 
 
-// Make a timeline to pin svg and change color of nav to black
-var tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: "svg",
-        scroller: "#main",
-        // markers: "true",
-        start: "top 45%",
-        end: "top -50%",
-        scrub: true,
-    }
-})
+        // Make a timeline to pin svg and change color of nav to black
+        var tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "svg",
+                scroller: "#main",
+                // markers: "true",
+                start: "top 45%",
+                end: "top -50%",
+                scrub: true,
+            }
+        })
 
-tl.to("svg", {
-    scale: 1,
-    top: "5%",
-    fill: "#111",
+        tl.to("svg", {
+            scale: 1,
+            top: "5%",
+            fill: "#111",
 
-})
+        })
 
 
-tl.to("#nav", {
-    color: "#111",
-    background: "linear-gradient(#ffffffeb,#ffffff6e,#ffffff00)",
-})
+        tl.to("#nav", {
+            color: "#111",
+            background: "linear-gradient(#ffffffeb,#ffffff6e,#ffffff00)",
+        })
 
-// Make a timeline again to change color of nav and svg to white
+        // Make a timeline again to change color of nav and svg to white
 
-var tl2 = gsap.timeline({
-    scrollTrigger: {
-        trigger: "svg",
-        scroller: "#main",
-        // markers: "true",
-        start: "top -340%",
-        end: "top -340%",
-        scrub: true,
-    }
-})
-tl2.to("svg", {
-    scale: 1,
-    top: "5%",
-    fill: "#fff",
+        var tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: "svg",
+                scroller: "#main",
+                // markers: "true",
+                start: "top -340%",
+                end: "top -340%",
+                scrub: true,
+            }
+        })
+        tl2.to("svg", {
+            scale: 1,
+            top: "5%",
+            fill: "#fff",
 
-})
-tl2.to("#nav", {
-    color: "#fff",
-    background: "linear-gradient(#000000d5,#00000089,#00000000)",
-})
+        })
+        tl2.to("#nav", {
+            color: "#fff",
+            background: "linear-gradient(#000000d5,#00000089,#00000000)",
+        })
 
-gsap.to("#page5",{
-    scrollTrigger:{
-        trigger:"#page5",
-        scroller:"#main",
-        start:"top 0%",
-        end:"top -100%",
-        scrub:true,
-        pin:true,
-        markers:true
-    }
-})
-gsap.from("#page5-div1",{
-    rotate:-5,
-    scrollTrigger:{
-        trigger:"#page5-div1",
-        scroller:"#main",
-        start:"top 85%%",
-        end:"top 30%",
-        markers:true,
-        scrub:true,
-    }
-})
+        gsap.to("#page5", {
+            scrollTrigger: {
+                trigger: "#page5",
+                scroller: "#main",
+                start: "top 0%",
+                end: "top -100%",
+                scrub: true,
+                pin: true,
+                markers: true
+            }
+        })
+        gsap.from("#page5-div1", {
+            rotate: -5,
+            scrollTrigger: {
+                trigger: "#page5-div1",
+                scroller: "#main",
+                start: "top 85%%",
+                end: "top 30%",
+                markers: true,
+                scrub: true,
+            }
+        })
 
-gsap.from("#page5-div2",{
-    y:570,
-    rotate:-15,
-    scrollTrigger:{
-        trigger:"#page5-div2",
-        scroller:"#main",
-        start:"top 80%",
-        end:"top 50%",
-        scrub:2,
-        markers:true
-    }
-})
+        gsap.from("#page5-div2", {
+            y: 570,
+            rotate: -15,
+            scrollTrigger: {
+                trigger: "#page5-div2",
+                scroller: "#main",
+                start: "top 80%",
+                end: "top 50%",
+                scrub: 2,
+                markers: true
+            }
+        })
+
+        // Make a timeline to pin svg and change color of nav to black
+        var tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "svg",
+                scroller: "#main",
+                // markers: "true",
+                start: "top 25%",
+                end: "top -70%",
+                scrub: true,
+            }
+        })
+
+        tl.to("svg", {
+            scale: 1,
+            top: "5%",
+            fill: "#111",
+
+        })
+
+
+        tl.to("#nav", {
+            color: "#111",
+            background: "linear-gradient(#ffffffeb,#ffffff6e,#ffffff00)",
+        })
+
+        // Make a timeline again to change color of nav and svg to white
+
+        var tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: "svg",
+                scroller: "#main",
+                // markers: "true",
+                start: "top -340%",
+                end: "top -340%",
+                scrub: true,
+            }
+        })
+        tl2.to("svg", {
+            scale: 1,
+            top: "5%",
+            fill: "#fff",
+
+        })
+        tl2.to("#nav", {
+            color: "#fff",
+            background: "linear-gradient(#000000d5,#00000089,#00000000)",
+        })
+
+        gsap.to("#page5", {
+            scrollTrigger: {
+                trigger: "#page5",
+                scroller: "#main",
+                start: "top 0%",
+                end: "top -100%",
+                scrub: true,
+                pin: true,
+                markers: true
+            }
+        })
+        gsap.from("#page5-div1", {
+            rotate: -5,
+            scrollTrigger: {
+                trigger: "#page5-div1",
+                scroller: "#main",
+                start: "top 85%%",
+                end: "top 30%",
+                markers: true,
+                scrub: true,
+            }
+        })
+
+        gsap.from("#page5-div2", {
+            y: 570,
+            rotate: -15,
+            scrollTrigger: {
+                trigger: "#page5-div2",
+                scroller: "#main",
+                start: "top 80%",
+                end: "top 50%",
+                scrub: 2,
+                markers: true
+            }
+        })
+
+
+
+// window.addEventListener("resize", function () {
+//     var abc = document.querySelector("#main")
+//     console.log()
+//     if(abc.getBoundingClientRect().width>600){
+//         console.log("hyeloenheye")
+//     }
+// })
