@@ -7,31 +7,37 @@
     font-family: america-b;
     src: url(./GT-America-Compressed-Black-Trial.woff2);
 }
+
 @font-face {
     font-family: Gilroy;
     src: url(./Gilroy-Medium.woff2);
     font-weight: 500;
 }
+
 @font-face {
     font-family: Gilroy;
     src: url(./Gilroy-Semibold.woff2);
     font-weight: 600;
 }
+
 @font-face {
     font-family: Gilroy;
     src: url(./Gilroy-bold.woff2);
     font-weight: 700;
 }
+
 @font-face {
     font-family: Montserrat;
     src: url(./Montserrat-Bold.woff2);
     font-weight: 600;
 }
+
 @font-face {
     font-family: Montserrat;
     src: url(./Montserrat-Bold.woff2);
     font-weight: 700;
 }
+
 @font-face {
     font-family: Montserrat;
     src: url(./Montserrat-Medium.woff2);
@@ -43,7 +49,7 @@
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     font-family: gilroy;
 }
 
@@ -73,11 +79,11 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding: 10px 20px;
     position: fixed;
     z-index: 99;
@@ -93,9 +99,11 @@ body {
     /* background-color: red; */
     text-align: center;
 }
-#nav i{
+
+#nav i {
     display: none;
 }
+
 #nav h3:nth-child(1) {
     text-align: left;
 
@@ -116,6 +124,10 @@ body {
 
 }
 
+#full-scr {
+    display: none;
+}
+
 #page1 {
     height: 100vh;
     position: relative;
@@ -132,8 +144,8 @@ svg {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%) scale(1.4);
-        -ms-transform: translate(-50%, -50%) scale(1.4);
-            transform: translate(-50%, -50%) scale(1.4);
+    -ms-transform: translate(-50%, -50%) scale(1.4);
+    transform: translate(-50%, -50%) scale(1.4);
     z-index: 99;
     fill: #c45508;
 }
@@ -156,6 +168,9 @@ path {
     font-weight: 900;
 }
 
+#page1 h1 span {
+    font-family: america-b;
+}
 #page2 h1 span {
     font-family: america-b;
 }
@@ -289,8 +304,8 @@ path {
     font-family: gilroy;
     font-weight: 600;
     -webkit-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
 }
 
 #page3 {
@@ -346,9 +361,9 @@ path {
     height: 150px;
     width: 150px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: top;
-       object-position: top;
+    object-position: top;
 }
 
 #img-div {
@@ -457,13 +472,13 @@ path {
     /* background-color: green; */
     margin-left: -4px;
     -webkit-animation-name: move-txt;
-            animation-name: move-txt;
+    animation-name: move-txt;
     -webkit-animation-duration: 4s;
-            animation-duration: 4s;
+    animation-duration: 4s;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+    animation-timing-function: linear;
     position: relative;
     padding-right: 70px;
     /* background-color: red; */
@@ -478,8 +493,8 @@ path {
     position: absolute;
     top: 50%;
     -webkit-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-            transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
 
 }
 
@@ -494,24 +509,24 @@ path {
 @-webkit-keyframes move-txt {
     0% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
+        transform: translateX(0);
     }
 
     100% {
         -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
+        transform: translateX(-100%);
     }
 }
 
 @keyframes move-txt {
     0% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
+        transform: translateX(0);
     }
 
     100% {
         -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
+        transform: translateX(-100%);
     }
 }
 
@@ -522,13 +537,14 @@ path {
     padding: 2px;
     display: -webkit-box;
     display: -ms-flexbox;
+    position: relative;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 #page5-div1 {
@@ -537,7 +553,6 @@ path {
     position: absolute;
     background-size: cover;
     rotate: 5deg;
-
     background-position: center;
     background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/336838d48da46ea806426b4185e7f8a87262a6a5-1521x974.png/image.png?rect=1,0,1520,974&bg=F2F1EC&w=1024&h=656&auto=format);
 }
@@ -563,7 +578,7 @@ path {
 #page6 img {
     width: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     position: absolute;
 
 }
@@ -638,8 +653,8 @@ path {
     top: 350%;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     text-align: center;
 
     width: 60%;
@@ -653,24 +668,84 @@ path {
     color: #fff;
 }
 
+#page7 {
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 100px 80px 100px 10px;
+}
+
+#page7 h1 {
+    font-size: 11vw;
+    color: #faf6ef;
+    text-transform: uppercase;
+    font-family: america;
+}
+
+#page7-part2 {
+    color: #faf6ef;
+    padding-top: 40px;
+}
+
+
+#lola2 h2 {
+    font-size: 24px;
+    font-family: america;
+    font-weight: 100;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.4px #111;
+    letter-spacing: -1px;
+    margin-bottom: 13px;
+}
+
+#lola2 h3 {
+    font-size: 22px;
+    font-family: america;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-top: -3px;
+    -webkit-text-stroke: 0.6px #111;
+    letter-spacing: -1px;
+}
+
+#lola3 {
+    text-align: left;
+    margin-top: 40px;
+
+}
+
+#lola3 h4 {
+    font-size: 24px;
+    font-family: america;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
 @media (max-width:600px) {
-body{
-    overflow-x: hidden;
-}
-#main{
-    overflow-x: hidden;
-}
-    #nav {
+    body {
+        overflow-x: hidden;
+    }
+
+    #main {
+        overflow-x: hidden;
         width: 100%;
+    }
+
+    #nav {
+        width: 100vw;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
         padding: 10px 20px;
         position: fixed;
         z-index: 99;
@@ -687,7 +762,8 @@ body{
         text-align: center;
         display: none;
     }
-    #nav i{
+
+    #nav i {
         display: block;
         font-size: 25px;
         font-weight: 900;
@@ -713,10 +789,81 @@ body{
 
     }
 
+    #full-scr {
+        height: 100vh;
+        width: 100%;
+        background-color: #faf6ef;
+        position: fixed;
+        z-index: 999;
+        padding: 130px 18px 18px 18px;
+        top: -100vh;
+        transition: all cubic-bezier(0, .93, .91, .98) 0.7s;
+        display: block;
+    }
+
+    #full-scr i {
+        position: absolute;
+        top: 3%;
+        left: 5%;
+        font-size: 34px;
+        font-weight: 800;
+    }
+
+
+    #lol h1 {
+        font-size: 72px;
+        font-family: america;
+        line-height: 70px;
+        text-transform: uppercase;
+    }
+
+    #lol2 {
+        /* background-color: red; */
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #b7b7b7;
+    }
+
+    #lol2 h2 {
+        font-size: 20px;
+        font-family: america;
+        font-weight: 100;
+        text-transform: uppercase;
+        -webkit-text-stroke: 0.4px #faf6ef;
+        letter-spacing: -1px;
+        margin-bottom: 13px;
+    }
+
+    #lol2 h3 {
+        font-size: 20px;
+        font-family: america;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-top: -3px;
+        -webkit-text-stroke: 0.6px #faf6ef;
+        letter-spacing: -1px;
+    }
+
+    #lol3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+
+    }
+
+    #lol3 h4 {
+        font-size: 20px;
+        font-family: america;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-top: -3px;
+    }
+
     #page1 {
         height: 80vh;
         position: relative;
-        width: 100%;
+        width: 100vw;
         background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/b66561b8981387290c0f682665512759c66aa7bb-2880x1796.png/image.png?bg=F2F1EC&w=1440&h=898&auto=format);
         background-size: cover;
         background-position: 40% 30%;
@@ -726,11 +873,11 @@ body{
 
     svg {
         position: absolute;
-        top: 30%;
+        top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%) scale(1.3);
-            -ms-transform: translate(-50%, -50%) scale(1.3);
-                transform: translate(-50%, -50%) scale(1.3);
+        -ms-transform: translate(-50%, -50%) scale(1.3);
+        transform: translate(-50%, -50%) scale(1.3);
         z-index: 99;
         fill: #c45508;
     }
@@ -739,31 +886,75 @@ body{
         fill: inherit;
     }
 
+    #full-scr svg {
+        position: absolute;
+        top: 6%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.75);
+        z-index: 99;
+        fill: #101010;
+
+
+
+    }
+
+    #full-scr path {
+        fill: inherit;
+    }
+
 
     #page1 h1 {
-        display: none;
+        font-size: 26vw;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 0%;
+        /* background-color: red; */
+        line-height: 21vw;
+        color: #c45508;
+        text-transform: uppercase;
+        font-family: america-b;
+        font-weight: 900;
     }
+
+    #page2 h1 span {
+        font-family: america-b;
+    }
+
+    #page1 h1::before {
+        content: "bownds ranches. est. 1885";
+        position: absolute;
+        font-size: 3.2vw;
+        width: 35%;
+        top: -25%;
+        font-family: gilroy;
+        line-height: 3.2vw;
+        text-align: left;
+        font-weight: 500;
+        left: 6.7vw;
+    }
+
+    #page1 h1::after {
+        content: "marketing and selling texas ranches";
+        position: absolute;
+        font-size: 3.2vw;
+        width: 45%;
+        top: -25%;
+        font-family: gilroy;
+        line-height: 3.2vw;
+        text-align: right;
+        font-weight: 500;
+        right: 6.7vw;
+    }
+
 
 
     #overlay {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
+        display: none;
     }
 
     #scroll {
-        background-image: url(https://bowndsranches.com/textures/buttonDarkBg.svg);
-        padding: 8px 20px;
-        font-family: america;
-        word-spacing: 5px;
-        color: #fff;
-        position: absolute;
-        text-transform: uppercase;
-        scale: 0;
-        -webkit-transition: all ease-out 0.3s;
-        -o-transition: all ease-out 0.3s;
-        transition: all ease-out 0.3s;
+        display: none;
     }
 
     #page2 {
@@ -830,8 +1021,8 @@ body{
         position: relative;
         left: 20%;
 
-        rotate: 0deg;
-        margin-top: 50px;
+        rotate: 5deg;
+        margin-top: 10px;
     }
 
     #page2 h2 {
@@ -840,9 +1031,10 @@ body{
         word-spacing: -2px;
         letter-spacing: -1px;
         text-align: center;
-        padding:10px 10px;
+        padding: 10px 10px;
         color: #111;
         position: relative;
+        top: -1vw;
         font-family: america-b;
     }
 
@@ -859,8 +1051,8 @@ body{
         font-family: gilroy;
         font-weight: 600;
         -webkit-transform: translate(-50%, 0);
-            -ms-transform: translate(-50%, 0);
-                transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
     }
 
     #page3 {
@@ -868,65 +1060,71 @@ body{
         width: 100%;
         position: relative;
         background-color: #111;
-        padding: 100px 120px;
+        padding: 30px 18px;
     }
 
     #page3 h1 {
         color: #fff;
-        font-size: 9vw;
-        letter-spacing: -5px;
+        font-size: 12.5vw;
+        letter-spacing: -1px;
         word-spacing: 0px;
-        line-height: 8vw;
+        line-height: 11vw;
 
         font-family: america;
         text-align: center;
         text-transform: uppercase;
     }
 
+    #page3 h1::before {
+        content: "“";
+    }
+
+    #page3 h1::after {
+        content: "”";
+    }
+
     #page3 h2 {
         color: #fff;
-        font-size: 7.5vw;
-        letter-spacing: -5px;
+        font-size: 12vw;
+        letter-spacing: -2px;
         word-spacing: 5px;
         font-weight: 100;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        margin-top: 8px;
+        line-height: 10vw;
         font-family: america;
         text-align: center;
-        -webkit-text-stroke: 3px #111;
+        -webkit-text-stroke: 2px #111;
         text-transform: uppercase;
     }
 
     #page3 p {
         color: #fff;
-        font-size: 1vw;
-        width: 50%;
+        font-size: 2.8vw;
+        width: 82%;
         font-weight: 600;
         font-family: gilroy;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 2vw;
+        line-height: 5vw;
+        margin-top: 5vw;
         text-transform: uppercase;
 
     }
 
-    #page3 img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 150px;
-        width: 150px;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -o-object-position: top;
-           object-position: top;
-    }
+
 
     #img-div {
         position: absolute;
-        top: 0;
-        left: 0;
-        height: 150px;
-        width: 150px;
+        top: 74%;
+        /* display: none; */
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 120px;
+        width: 120px;
         background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/9b2b1e20d57cf6988eb3192c1a261b8475d701d4-8192x5464.jpg/JRP_BR_01_1165-Edit.jpg?rect=1038,632,3956,4832&bg=F2F1EC&fp-x=0.3681506849315068&fp-y=0.5578489448352462&w=640&h=815&fit=crop&crop=focalpoint&auto=format);
         background-position: top;
         background-size: cover;
@@ -940,7 +1138,9 @@ body{
         width: 100%;
         left: 0;
         bottom: 0;
-        padding: 10px 10px;
+        padding: 5px 10px;
+        font-size: 10px;
+        text-transform: uppercase;
         z-index: 99;
         background-color: #fff;
     }
@@ -961,6 +1161,7 @@ body{
         text-transform: uppercase;
         font-size: 17px;
         z-index: 99;
+        display: none;
 
     }
 
@@ -968,6 +1169,7 @@ body{
         height: 300px;
         position: absolute;
         width: 250px;
+        display: none;
         z-index: 9;
 
     }
@@ -977,28 +1179,35 @@ body{
         border-top: 1px solid #ffffffc1;
         position: relative;
         cursor: default;
-        margin-top: -20px;
+        margin-top: -4px;
+        padding: 10px 0;
     }
 
     .elem:nth-last-child(1) {
         border-bottom: 1px solid #ffffffc1;
     }
 
+    .elem::-webkit-scrollbar {
+        display: none;
+    }
+
     .elem h1 {
-        font-size: 150px;
+        font-size: 14vw;
         color: #fff;
         text-transform: uppercase;
         text-align: center;
         -webkit-transition: opacity ease 0.1s;
         -o-transition: opacity ease 0.1s;
         transition: opacity ease 0.1s;
-        opacity: 0.3;
+        opacity: 0;
         font-family: america-b;
+        /* display: none; */
+
 
     }
 
     .elem h2 {
-        font-size: 150px;
+        font-size: 18vw;
         color: #fff;
         text-transform: uppercase;
         text-align: center;
@@ -1015,11 +1224,13 @@ body{
         overflow-y: hidden;
         position: absolute;
         top: 0;
-        -webkit-transition: opacity ease 0.1s;
-        -o-transition: opacity ease 0.1s;
         transition: opacity ease 0.1s;
-        opacity: 0;
+        opacity: 1;
         z-index: 10;
+    }
+
+    #moving-text::-webkit-scrollbar {
+        display: none;
     }
 
     #moving-text h2 {
@@ -1027,13 +1238,13 @@ body{
         /* background-color: green; */
         margin-left: -4px;
         -webkit-animation-name: move-txt;
-                animation-name: move-txt;
+        animation-name: move-txt;
         -webkit-animation-duration: 4s;
-                animation-duration: 4s;
+        animation-duration: 4s;
         -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
         -webkit-animation-timing-function: linear;
-                animation-timing-function: linear;
+        animation-timing-function: linear;
         position: relative;
         padding-right: 70px;
         /* background-color: red; */
@@ -1044,12 +1255,13 @@ body{
     #moving-text h2 img {
         rotate: 45deg;
         height: 30px;
-        right: 3%;
+        right: 10%;
         position: absolute;
-        top: 50%;
+        top: 40%;
         -webkit-transform: translate(0, -50%);
-            -ms-transform: translate(0, -50%);
-                transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+
+        transform: translate(0, -50%);
 
     }
 
@@ -1063,51 +1275,46 @@ body{
 
     @-webkit-keyframes move-txt {
         0% {
-            -webkit-transform: translateX(0);
-                    transform: translateX(0);
+            transform: translateX(0);
         }
 
         100% {
-            -webkit-transform: translateX(-100%);
-                    transform: translateX(-100%);
+            transform: translateX(calc(-100% - 10px));
         }
     }
 
     @keyframes move-txt {
         0% {
             -webkit-transform: translateX(0);
-                    transform: translateX(0);
+            transform: translateX(0);
         }
 
         100% {
             -webkit-transform: translateX(-100%);
-                    transform: translateX(-100%);
+            transform: translateX(-100%);
         }
     }
 
 
     #page5 {
-        min-height: 100vh;
+        min-height: 70vh;
         width: 100%;
         padding: 2px;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        align-items: center;
+        background-color: #111;
+        position: relative;
+        justify-content: center;
     }
 
     #page5-div1 {
-        height: 400px;
-        width: 600px;
+        height: 180px;
+        width: 280px;
         position: absolute;
         background-size: cover;
-        rotate: 5deg;
-
+        rotate: 0deg;
+        top: 5%;
+        right: 7%;
         background-position: center;
         background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/336838d48da46ea806426b4185e7f8a87262a6a5-1521x974.png/image.png?rect=1,0,1520,974&bg=F2F1EC&w=1024&h=656&auto=format);
     }
@@ -1116,9 +1323,11 @@ body{
         z-index: 99;
         background-size: cover;
         background-position: center;
-        height: 400px;
-        width: 600px;
-        rotate: -4deg;
+        height: 180px;
+        width: 280px;
+        rotate: 0deg;
+        top: 48%;
+        left: 7%;
         position: absolute;
         background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/ac5d899c94acdca5124d1fcfb738940892e29544-1520x973.png/image.png?rect=0,1,1520,972&bg=F2F1EC&w=1024&h=655&auto=format);
     }
@@ -1126,14 +1335,16 @@ body{
     #page6 {
         min-height: 200vh;
         width: 100%;
-        padding: 2px;
+        padding: 0px;
         position: relative;
     }
 
     #page6 img {
         width: 100%;
         -o-object-fit: cover;
-           object-fit: cover;
+        object-fit: cover;
+        height: 100%;
+        object-position: center;
         position: absolute;
 
     }
@@ -1141,21 +1352,21 @@ body{
     #page6-text {
         position: relative;
         z-index: 99;
-        padding: 5px 20px;
+        padding: 26px 20px;
     }
 
     #page6-text h1 {
-        font-size: 7.5vw;
-        line-height: 7vw;
+        font-size: 15vw;
+        line-height: 13vw;
         color: #fff;
         font-family: america;
     }
 
     #text-right {
         position: absolute;
-        top: 150%;
-        right: 10%;
-        width: 20%;
+        top: 100%;
+        left: 20px;
+        width: 80%;
     }
 
     #text-right p {
@@ -1165,7 +1376,7 @@ body{
     }
 
     #page6-text button {
-        padding: 12px 30px;
+        padding: 12px 35px;
         font-size: 15px;
         margin-top: 30px;
         font-family: america;
@@ -1205,22 +1416,84 @@ body{
 
     #text-center {
         position: absolute;
-        top: 350%;
+        top: 200%;
         left: 50%;
         -webkit-transform: translate(-50%, 0);
-            -ms-transform: translate(-50%, 0);
-                transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
         text-align: center;
 
-        width: 60%;
+        width: 90%;
     }
 
     #page6-text h2 {
-        font-size: 4vw;
-        line-height: 3.5vw;
+        font-size: 10.5vw;
+        line-height: 10vw;
         text-align: center;
         font-family: america;
         color: #fff;
     }
 
+    #page7 {
+        height: 100vh;
+        width: 100%;
+        background-color: #111;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 100px 20px 100px 20px;
+    }
+
+    #page7 h1 {
+        font-size: 18vw;
+        color: #faf6ef;
+        text-transform: uppercase;
+        font-family: america;
+        white-space: nowrap;
+    }
+
+    #page7-part2 {
+        color: #faf6ef;
+        padding-top: 40px;
+    }
+
+
+    #lola2 h2 {
+        font-size: 24px;
+        font-family: america;
+        font-weight: 100;
+        text-transform: uppercase;
+        -webkit-text-stroke: 0.4px #111;
+        letter-spacing: -1px;
+        margin-bottom: 13px;
+    }
+
+    #lola2 h3 {
+        font-size: 22px;
+        font-family: america;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-top: -3px;
+        -webkit-text-stroke: 0.6px #111;
+        letter-spacing: -1px;
+    }
+
+    #lola3 {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 120%;
+        margin-top: 40px;
+
+    }
+
+    #lola3 h4 {
+        font-size: 20px;
+        font-family: america;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-top: 3px;
+    }
 }
